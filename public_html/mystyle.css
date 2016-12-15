@@ -5,13 +5,42 @@ body {
   overflow: hidden;
 }
 
-#img {
+#clock {
+  position: absolute;
   width: 100%;
-  height: 100%;
   margin-left: 150px;
 }
 
 img {
   width: 30%;
   height: 30%;
+}
+
+#arrow1 {
+  width: 30px;
+  height: 63px;
+  border: 2px solid transparent;
+  border-left-color: black;
+  position: absolute;
+  margin-left: 353px;
+  margin-top: 240px;
+}
+
+#arrow2 {
+  width: 30px;
+  height: 45px;
+  border: 3px solid transparent;
+  border-left-color: black;
+  position: absolute;
+  margin-left: 355px;
+  margin-top: 260px;
+}
+#arrow3 {
+  width: 30px;
+  height: 46px;
+  border: 5px solid transparent;
+  border-left-color: black;
+  position: absolute;
+  margin-left: 352px;
+  margin-top: 250px;
 }
