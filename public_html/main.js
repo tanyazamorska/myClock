@@ -5,23 +5,24 @@ function initialClocks() {
   var seconds = d.getSeconds();
   var minutes = d.getMinutes();
   var hours = d.getHours();
-  
+
   var currentSeconds = document.querySelectorAll("div")[1];
-  var seconds60 = seconds % 60;
-  var secondsDegree = 360 * seconds60 / 360;
-  console.log(seconds);
-  currentSeconds.style.cssText = "transform: rotate("+secondsDegree+"deg);";
-  
+  var secondsDegree = seconds * 6;
+  currentSeconds.style.cssText = "transform: rotate(" + secondsDegree + "deg);";
+
   var currentMinutes = document.querySelectorAll("div")[3];
   var minutes60 = minutes % 60;
-  console.log(minutes);
   var minutesDegree = 360 * minutes60 / 60;
-  currentMinutes.style.cssText = "transform: rotate("+minutesDegree+"deg);";
-  
+  currentMinutes.style.cssText = "transform: rotate(" + minutesDegree + "deg);";
+
   var currentHour = document.querySelectorAll("div")[5];
   var hours12 = hours % 12;
   var hoursDegree = 360 * hours12 / 12;
-  currentHour.style.cssText = "transform: rotate("+hoursDegree+"deg);";	
+  currentHour.style.cssText = "transform: rotate(" + hoursDegree + "deg);";
+
+  setInterval(function () {
+	initialClocks();
+  }, 1000);
 }
 initialClocks();
 
