@@ -1,6 +1,7 @@
 "use strict";
 
 function initialClocks() {
+  console.log("1");
   var d = new Date();
   var seconds = d.getSeconds();
   var minutes = d.getMinutes();
@@ -20,10 +21,12 @@ function initialClocks() {
   var hoursDegree = 360 * hours12 / 12;
   currentHour.style.cssText = "transform: rotate(" + hoursDegree + "deg);";
 
-  setInterval(function () {
+  var timerId = setInterval(function () {
 	initialClocks();
+  }, 1000);
+  
+  setTimeout(function () {
+	clearInterval(timerId);
   }, 1000);
 }
 initialClocks();
-
-  

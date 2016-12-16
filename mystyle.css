@@ -3,6 +3,7 @@ body {
   height: 100%;
   padding: 25px;
   overflow: hidden;
+  background-color: white;
 }
 
 #clock {
@@ -42,7 +43,7 @@ img {
 
 #minutes {
   width: 3px;
-  height: 50px;
+  height: 45px;
   position: absolute;
   margin-top: 15px;
   background-color: #212127;
@@ -55,10 +56,10 @@ img {
   margin-top: 236px;
 }
 #hours {
-  width: 5px;
-  height: 40px;
+  width: 4px;
+  height: 30px;
   position: absolute;
-  margin-top: 26px;
+  margin-top: 35px;
   background-color: #212127;
   border-radius: 5px;
 }
